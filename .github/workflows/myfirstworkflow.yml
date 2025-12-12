@@ -12,4 +12,15 @@ jobs:
             run: echo "this is my first github workflow"
           - name: check os release for github runner 
             run: cat /etc/os-release
-        
+            
+     job2:
+          name: JOB2
+          runs-on: ubuntu-latest
+          steps: 
+           - name: check the hostname for runner
+             run: hostname
+           - name: running multiple command 
+             run: |
+               echo "hi from pune"
+               echo "current time is 'date' "
+           
