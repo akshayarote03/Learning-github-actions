@@ -14,10 +14,12 @@ jobs:
           - name: step 2 - checkout   
             uses: actions/checkout@v6.0.1
           - name: step 3
-            run: |
-               pwd
-               ls -ltr
-               hostname
+            run: echo "pwd" >> singlefile.txt
+          - name: step 4
+            uses: actions/upload-artifact@v4
+            with: 
+                 name: singlefile
+                 path: ./singlefile.txt
                
      
     
